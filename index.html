@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO Tasks</title>
+    <link rel="Stylesheet" href = "styles.css">
+    <script src="toDoTasks.js" defer></script>
+</head>
+<body>
+    <h1>TaskTrack &#128220;</h1>
+    <div class="buttons">
+        <button class="btn" id="new-record-button">
+            <span class="icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4C9 3.44772 9.44772 3 10 3H21C21.5523 3 22 3.44772 22 4C22 4.55228 21.5523 5 21 5H10C9.44772 5 9 4.55228 9 4ZM9 10C9 9.44772 9.44772 9 10 9H21C21.5523 9 22 9.44772 22 10C22 10.5523 21.5523 11 21 11H10C9.44772 11 9 10.5523 9 10ZM10 15C9.44772 15 9 15.4477 9 16C9 16.5523 9.44772 17 10 17H14C14.5523 17 15 16.5523 15 16C15 15.4477 14.5523 15 14 15H10ZM4 4.5C4.82843 4.5 5.5 5.17157 5.5 6C5.5 6.82843 4.82843 7.5 4 7.5C3.17157 7.5 2.5 6.82843 2.5 6C2.5 5.17157 3.17157 4.5 4 4.5ZM4 9.5C4.82843 9.5 5.5 10.1716 5.5 11C5.5 11.8284 4.82843 12.5 4 12.5C3.17157 12.5 2.5 11.8284 2.5 11C2.5 10.1716 3.17157 9.5 4 9.5ZM4 14.5C4.82843 14.5 5.5 15.1716 5.5 16C5.5 16.8284 4.82843 17.5 4 17.5C3.17157 17.5 2.5 16.8284 2.5 16C2.5 15.1716 3.17157 14.5 4 14.5ZM18 14C18.5523 14 19 14.4477 19 15V17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H19V21C19 21.5523 18.5523 22 18 22C17.4477 22 17 21.5523 17 21V19H15C14.4477 19 14 18.5523 14 18C14 17.4477 14.4477 17 15 17H17V15C17 14.4477 17.4477 14 18 14Z" fill="#ffffff"/>
+                  </svg>                     
+            </span>
+            <span class="text">New Task</span>
+        </button>
+        <div id="task-form-container" class="hidden">
+            <form id="task-form">
+                <h2>Create New Task</h2>
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" required>
+                <label for="task-priority">Select Priority Level</label>
+                <select name="task-priority" id="task-priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <div class="task-status-container">
+                    <label for="task-status">Task completed?</label>
+                    <input type="checkbox" id="task-status">
+                </div>                    
+                <label for="task-desc">Description:</label>
+                <textarea id="task-desc" required></textarea>
+                <div class="button-container">
+                    <button type="button" id="delete-button" class="deletion">Delete</button>
+                <div class="button-group">
+                <button type="button" id="close-form" class="cancel-des">Cancel</button>
+                <button type="submit" class="task-create save-design">Save Task</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div id="ongoing-task-container">
+            <h2>
+                Ongoing Tasks
+            </h2>
+            <ul id="ongoingTaskList"></ul>
+        </div>
+        <div id="completed-task-container">
+            <h2>
+                Completed Tasks
+            </h2>
+            <ul id="completedTaskList"></ul>
+        </div>
+        <!-- <button id="rec-save-button">Save Task</button> -->
+
+</body>
