@@ -38,9 +38,31 @@
                 <div class="button-container">
                     <button type="button" id="delete-button" class="deletion">Delete</button>
                 <div class="button-group">
-                <button type="button" id="close-form" class="cancel-des">Cancel</button>
-                <button type="submit" class="task-create save-design">Save Task</button>
+                    <button type="button" id="close-form" class="cancel-des">Cancel</button>
+                    <button type="submit" class="task-create save-design">Save Task</button>
                 </div>
+                </div>
+                <div class="timer-container">
+                    <div class = "button-container">
+                        <button type="button" class="reset-time deletion" id="reset-time">Reset Timer</button>
+                    <div class="button-group">
+                        <button type="button" class="cancel-des" id="stop-time">Stop Timer</button>
+                        <button type="button" class="start-time save-design" id="start-time">Start Timer</button>
+                    </div>
+                    </div>
+                    <div id="time">
+                        <span class="digit" id="hr">
+                            00</span>
+                        <span class="txt">Hr</span>
+                        <span class="digit" id="min">
+                            00</span>
+                        <span class="txt">Min</span>
+                        <span class="digit" id="sec">
+                            00</span>
+                        <span class="txt">Sec</span>
+                        <span class="digit" id="count">
+                            00</span>
+                    </div>
                 </div>
             </form>
         </div>
@@ -57,6 +79,4 @@
             </h2>
             <ul id="completedTaskList"></ul>
         </div>
-        <!-- <button id="rec-save-button">Save Task</button> -->
-
 </body>
